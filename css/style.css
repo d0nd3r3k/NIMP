@@ -1,0 +1,138 @@
+/*
+Jamendo Player Stylesheet
+Cooked by Donald Derek Haddad at Arabnet Devtour 2012
+*/
+
+
+.wf-loading * {
+    opacity: 0;
+}
+
+
+h1,h2,h3,h4{
+    font-family: 'Press Start 2P', sans-serif;
+}
+ul,ol{
+    list-style: none;
+    margin:0;
+    padding:0;  
+    font-size: 10px;
+}
+body{
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #000000;  
+    color:#FEFEFE;
+}
+
+/*To Load Google Fonts in a decent way*/
+.wf-loading {
+    background: url('../img/ajax-loader.gif') no-repeat center center;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.wf-active *, 
+.wf-inactive * {
+    -webkit-transition: opacity 1s ease-out;  
+    -moz-transition: opacity 1s ease-out; 
+    -o-transition: opacity 1s ease-out;  
+    transition: opacity 1s ease-out;  
+}
+
+.wf-/*loading*/:after {
+    content: "loading fonts..";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #135040;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 20em;
+    text-align: center;
+}
+.container{
+    margin: 0px 20px;
+}
+
+.criteria li{
+    display: inline;
+    cursor: pointer;
+}
+.criteria li:hover, .list li:hover{
+    color:#999;
+}
+
+.loading-text{
+    margin: 10px 4px;
+}
+.ajax-loader{
+    background: url('../img/ajax-loader.gif') no-repeat center center;
+    height: 50px;
+    width: 240px;
+}
+#Playlist{
+    margin-left: 10px;  
+}
+#Playlist ul{
+    max-height: 400px;
+    overflow: auto;
+}
+#Search{
+    margin-top: 10px;   
+}
+.list li{
+    cursor: pointer;
+    margin: 0px 0;
+    border-bottom: 1px solid #999;
+    padding: 8px 0;
+}
+.list .selected{
+    color:#999;
+}
+
+#AlbumInfo{
+    height: 100px;
+    margin: 20px 0;
+    font-size: 12px;
+}
+#AlbumInfo #info{
+    float:left;
+    width:450px;   
+}
+#image, #robot{
+    float: left;
+    padding-right: 15px;
+    position: relative;
+    height:100px;
+    width:100px;
+}
+#hello-world{
+    margin-left: 140px;
+}
+
+.boldy{
+    color:#999;
+    font-weight: bold;
+}
+.your-playlist{
+    min-height: 195px;  
+}
+.footer{
+    font-size: 9px;
+}
+.footer .tweet{
+    color:#bcdb53;
+}
+.footer .tweet:hover{
+    color:#fde44c;
+}
+.acrobyte{
+    color:#fde44c;
+}
+.acrobyte:hover{
+    color:#bcdb53;
+}
+.right{float:right;}

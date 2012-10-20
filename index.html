@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <title>Jamendo Player</title>
+        <meta name="description" content="">
+        <meta name="author" content="Donald Derek Haddad">
+
+        <!-- Mobile Specific Metas-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- Cascading Style Sheets-->
+        <link rel="stylesheet" href="css/normalize.css" type="text/css" media="all"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+        <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="all"/>
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="#" />
+        <link rel="apple-touch-icon" href="#" />
+        
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <!--Google Fonts-->
+        <script type="text/javascript">
+            WebFontConfig = {
+                google: { families: [ 'Press+Start+2P::latin'] }
+            };
+            (function() {
+                var wf = document.createElement('script');
+                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                wf.type = 'text/javascript';
+                wf.async = 'true';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wf, s);
+            })(); </script>
+
+
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+
+                    <div class="row-fluid">
+                        <div class="span6">
+
+                            <div id="Playlist">
+                                <h3>Now PLaying</h3>
+                                <audio id="MusicPlayer" src="" controls preload="auto" autoplay="autoplay" autobuffer></audio>
+                                <div id="loading-list">                
+                                    <div class="ajax-loader"></div>
+                                    <div class="loading-text">Loading List...</div>
+                                </div>
+                                <h4 id="list-name"></h4>
+                                <ul class="list">
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="span6">
+
+                            <div id="Search">
+                                <form action="" onsubmit="search(); return false;">
+                                    <input id="Searchbox" type="text" size="24" placeholder="search your music" title="Search for artist, track, album">
+                                    <input id="SearchboxSubmit" type="submit" value="Search" title="Search">
+                                </form>
+                            </div>
+                            <div id="AlbumInfo">
+                                <div id="image"></div>
+                                <div id="robot"></div>
+                                <div id="hello-world"></div>
+                                <div id="info">
+                                    <div id="name"></div>
+                                    <div id="album_name"></div>
+                                    <div id="artist_name"></div>
+                                </div>
+                            </div>
+                            <h5>Your Style</h5>
+                            <ul class="criteria" id="tag">
+                                <li tag="electronic">electronic</li>  
+                                <li tag="ambient">ambient</li>  
+                                <li tag="experimental">experimental</li>  
+                                <li tag="dubstep" >dubstep</li>  
+                                <li tag="dnb" >Drum 'n Bass</li>  
+                                <li tag="techno">techno</li>  
+                                <li tag="metal">metal</li>  
+                                <li tag="dance">dance</li>  
+                                <li tag="trance">trance</li>  
+                                <li tag="classical">classical</li>  
+                                <li tag="indie">indie</li>  
+                                <li tag="punk">punk</li>  
+                                <li tag="jazz">jazz</li>  
+                                <li tag="folk">folk</li>  
+                                <li tag="industrial">industrial</li>  
+                                <li tag="lounge">lounge</li>  
+                                <li tag="triphop">triphop</li>  
+                                <li tag="funk">funk</li>  
+                                <li tag="world">world</li>  
+                                <li tag="newage">newage</li>  
+                                <li tag="reggae">reggae</li>  
+                                <li tag="poprock">poprock</li>  
+                                <li tag="grunge">grunge</li>  
+                                <li tag="ska">ska</li>  
+                                <li tag="disco">disco</li>  
+                                <li tag="african">african</li>  
+                                <li tag="asian">asian</li>  
+
+                            </ul>
+                            <h5>Your Mood</h5>
+                            <ul class="criteria" id="mood">
+                                <li tag="soundtrack">soundtrack</li>  
+                                <li tag="soft">soft</li>  
+                                <li tag="emotion">emotion</li>  
+                                <li tag="political">political</li>  
+                                <li tag="comedy">comedy</li>  
+                                <li tag="horror">horror</li>  
+                                <li tag="nature">nature</li>  
+                                <li tag="children">children</li>  
+                                <li tag="travel">travel</li>  
+                                <li tag="scifi">scifi</li>  
+                                <li tag="drama">drama</li>  
+                                <li tag="silentfilm">silentfilm</li>  
+                                <li tag="videogame">videogame</li>  
+                                <li tag="western">western</li>  
+                                <li tag="education">education</li>  
+                                <li tag="crime">crime</li>  
+                                <li tag="health">health</li>  
+                                <li tag="entertainment">entertainment</li>  
+                                <li tag="adventure">adventure</li>  
+                                <li tag="society">society</li>  
+                                <li tag="adult">adult</li>  
+                                <li tag="communication">communication</li>  
+                            </ul>
+                            <h5>Your Playlists <span class="create-playlist">+</span></h5>
+                            <ul class="your-playlist">
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="span6 offset6">
+                    <div class="footer">Smashed into bytes by <a href="http://www.donaldderek.com" target="_BLANK" class="acrobyte"> donaldderek.com</a> <a href="https://twitter.com/ArabNetME" target="_BLANK" class="tweet">@ArabNetMe</a> <a href="https://twitter.com/search?q=%23DevTour&src=hash" target="_BLANK" class="tweet">#devtour</a> 2012</div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js" ></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/app.js" type="text/javascript"></script>
+    </body>
+</html>
